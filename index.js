@@ -9,6 +9,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'authorization']
 }));
+app.use(express.json());
 
 const pool = new Pool({
   host: process.env.DB_HOST,
